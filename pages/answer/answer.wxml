@@ -1,0 +1,52 @@
+<view class="container">
+  <image class="bg-img" src="{{imgUrl}}bg.png"></image>
+  <block wx:if="{{start == 0}}">
+    <view class="buttom-text-view">
+      <text class="buttom-text">连续答对40题有娃娃领取哟！</text>
+    </view>
+    <block wx:if="{{num == 4}}">
+      <text class="ready-num">3</text>
+    </block>
+    <block wx:elif="{{num == 3}}">
+      <text class="ready-num">2</text>
+    </block>
+    <block wx:elif="{{num == 2}}">
+      <text class="ready-num">1</text>
+    </block>
+    <block wx:elif="{{num == 1}}">
+      <text class="ready-num-1">开始</text>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="answer-top-view">
+      <text class="fight-tips-text">连续答对40题即可挑战成功</text>
+      <view class="progress-buttom-view" />
+      <view class="progress-top-view" style='width:{{progressWidth}}rpx;' />
+      <text class="num-index-text">第{{numIndex}}题</text>
+      <text class="formula-1">{{subtraction}}  {{operator}}  {{minuend}} </text>
+      <text class="formula-2"> = {{answer}} </text>
+    </view >
+
+    <view  class="answer-buttom-view">
+      <button class="dui-button" hover-class='button-click' bindtap='correctButtonTap'>
+        <image class="dui-img" src="{{imgUrl}}dui.png"></image>
+      </button>
+      <button class="cuo-button" hover-class='button-click' bindtap='wrontButtonTap'>
+        <image class="cuo-img" src="{{imgUrl}}cuo.png"></image>
+      </button>
+    </view>
+    
+    <block wx:if="{{gameOver == 1}}">
+      <button class="wenzi-img-button" plain='true' style='border:none;' bindtap='quitGame'>
+        <image class="wenzi-img" src="{{imgUrl}}tanc.png"></image>
+      </button>
+    </block>
+    <block wx:elif="{{gameOver == 2}}">           
+      <button class="wenzi-img-button" plain='true' style='border:none;' bindtap='quitGame'>
+        <image class="tanc2-img" src="{{imgUrl}}tanc2.png"></image>
+      </button>       
+    </block>
+  </block>
+</view>
+
+

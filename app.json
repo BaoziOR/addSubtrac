@@ -1,0 +1,13 @@
+{
+  "pages":[        
+    "pages/login/login", 
+    "pages/answer/answer",    
+    "pages/main/main"    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#216b99",
+    "navigationBarTitleText": "加减大师",
+    "navigationBarTextStyle":"black"
+  }
+}

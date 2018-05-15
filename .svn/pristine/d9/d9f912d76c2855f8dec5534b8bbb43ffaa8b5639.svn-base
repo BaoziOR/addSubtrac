@@ -1,0 +1,253 @@
+<template name="honorRank">
+  <view class="honor-item-view">
+    <text class="template-honor-index" style=' background-color:{{bg}}'>{{index}}</text>
+    <image class="template-honor-head" src="{{url}}"></image>
+    <text class="template-honor-name">{{name}}</text>
+    <text class="template-honor-num">获得娃娃{{num}}个</text>
+    <text></text>
+  </view>
+  <block wx:if='{{index != 8}}'>
+    <view class="row-view"></view>
+  </block>
+</template>
+
+
+<template name="winRank">
+  <view class="honor-item-view">
+    <text class="template-honor-index" style=' background-color:{{bg}}'>{{index}}</text>
+    <image class="template-honor-head" src="{{url}}"></image>
+    <text class="template-honor-name">{{name}}</text>
+    <text class="template-honor-num">挑战{{num}}次</text>
+  </view>
+  <block wx:if='{{index != 8}}'>
+    <view class="row-view"></view>
+  </block>
+</template>
+
+<template name="dollPics">
+  <view class="doll-template-view">
+    <image class="doll-img" src="../../resources/imgs/doll/{{img}}"></image>
+    <text class="doll-text-template-view">{{name}}</text>
+   
+  </view>
+</template>
+
+<template name="otherProgram">
+  <view class="other-program-view">
+    <image class="program-img" src="../../resources/imgs/main/{{pic}}"></image>
+    <view class="program-text">
+      <text class="program-text1">{{text1}}</text>
+      <text class="program-text2">{{text2}}</text>
+    </view>
+    <button class="program-button" plain='true' hover-class='button-click' style='border:none;' bindtap="jumpToOtherProgram" >
+        <image class="program-button-img" src="../../resources/imgs/main/xiazai.png"></image>
+    </button>
+  </view>
+</template>
+
+
+<template name="new-otherProgram">
+ <view class="new-one-other-program">
+    <button id="{{id}}" plain='true' hover-class='button-click' style='border:none; margin-bottom:0rpx;' bindtap="newOtherProgramButtonAction" >
+        <image class="new-program-button-img" src="{{pic}}"></image>
+    </button>
+    <text class="new-program-text">{{name}}</text>
+ </view>
+</template>
+
+
+
+<view class="main-container">
+  <block wx:if='{{selfPage == 1}}'>
+    <scroll-view scroll-y class="scroll-view">
+      <image class="bg-img" src="{{imgUrl}}bg.png"></image>
+      <view class="tubiao-view" bindtap="tuibiaoTap">
+        <image class="tubiao-img" src="{{imgUrl}}tubiao.png"></image>
+        <text class="tubiao-text">挑战成功赢娃娃</text>
+      </view>
+      <image class="weizi-img" src="{{imgUrl}}wenzi.png"></image>
+      <text class="fight-text-num-text">当前共有{{fightNum}}次挑战</text>
+      <button class="fight-button" plain='true' hover-class='button-click' style='border:none;' bindtap='jumpToFight'>
+        <image class="button-img" src="{{imgUrl}}button.png"></image>
+      </button>
+      <block wx:if='{{shwoFriendFight != outerVersion}}'>
+        <button class="friend-button" plain='true' hover-class='button-click' style='border:none;' open-type='share'>
+          <image class="button-img" src="{{imgUrl}}button2.png"></image>
+        </button>
+      </block>
+
+      <view class="bottom-view">
+        <!--<view class="new-other-program-view">
+          <block wx:for="{{newOtherProgram}}" wx:for-index="id">
+            <template is="new-otherProgram" data="{{...item}}" />
+          </block>
+        </view>-->
+
+        <!--<view class="new-other-program-view">
+          <image class="lianlian-line-img" src="{{imgUrl}}kaishiyouxo.png"></image>
+          <button class="kaishi-button" plain='true' hover-class='button-click' style='border:none;' bindtap="newOtherProgramButtonAction">
+            <image class="kaishi-img" src="{{imgUrl}}1_0000_kaishi.png"></image>
+          </button>         
+        </view>-->
+        <view class="new-other-program-view">
+          <ad unit-id="adunit-b1365bd5196ddf76"></ad>
+        </view>
+
+       <view class="change-text-view">
+          <text class="change-text" style="background:{{changeTextIndex == 0 ? '#216b99' : '#ffffff'}};color:{{changeTextIndex == 0 ? '#ffffff' : '#216b99'}}" bindtap='clickHonorRank'>荣誉榜</text>
+          <text class="change-text" style="background:{{changeTextIndex == 1 ? '#216b99' : '#ffffff'}};color:{{changeTextIndex == 1 ? '#ffffff' : '#216b99'}}" bindtap='clickWillRank'>毅力榜</text>
+          <text class="change-text" style="background:{{changeTextIndex == 2 ? '#216b99' : '#ffffff'}};color:{{changeTextIndex == 2 ? '#ffffff' : '#216b99'}}" bindtap='clickDollRank'>娃娃奖牌</text>
+        </view>   
+     
+        <block wx:if="{{changeTextIndex == 0}}">
+          <view class="honor-view">
+            <block wx:for="{{honorRank}}" wx:for-index="id">
+              <template is="honorRank" data="{{...item}}" />
+            </block>
+          </view>
+        </block>
+        <block wx:elif="{{changeTextIndex == 1}}">
+          <view class="honor-view">
+            <block wx:for="{{willRank}}" wx:for-index="id">
+              <template is="winRank" data="{{...item}}" />
+            </block>
+          </view>
+        </block>
+        <block wx:else>
+         
+            <view class="got-doll-view">
+              <text class="win-text">挑战成功领取娃娃</text>
+              <button class="got-doll-button" plain='true' hover-class='button-click' style='border:none;' bindtap="showInput">
+                <image class="got-doll-img" src="{{imgUrl}}lijilingqu.png"></image>
+              </button>
+            </view>
+              <view class="all-doll-pic">
+                <block wx:for="{{dollInfo}}" wx:for-index="id">
+                  <template is="dollPics" data="{{...item}}" />
+                </block>
+              </view>          
+        
+        </block>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:else>
+     <scroll-view scroll-y class="self-scroll-view">
+      <view class="self-top-view">
+        <image class="self-info-head" src="{{selfImg}}"></image>
+        <text class="doll-tips-text">{{selfName}}, 可领取娃娃{{dollNum}}个</text>
+        <view class="three-self-info">
+          <view class="self-info-view">
+            <text>{{canFightNum}}次</text>
+            <text>挑战机会</text>
+          </view>
+          <view class="self-info-view">
+            <text>{{haveFightNum}}次</text>
+            <text>已挑战</text>
+          </view>          
+          <view class="self-info-view">
+            <text>{{maxScore}}分</text>
+            <text>最高分</text>
+          </view>  
+        </view>
+      </view>
+      <view class="two-button-view">
+        <button class="self-page-button" plain='true' hover-class='button-click' style='border:none;' open-type='share' >
+          <image class="self-button-img" src="{{imgUrl}}anniu2.png"></image>
+        </button>
+        <button class="self-page-button" plain='true' hover-class='button-click' style='border:none;' open-type='share'>
+          <image class="self-button-img" src="{{imgUrl}}anniu1.png"></image>
+        </button>
+      </view> 
+      <view class="self-buttom-view">
+        <button class="kefu-button" plain='true' hover-class='button-click' style='border:none;' open-type='contact' >
+          <image class="kefu-img" src="{{imgUrl}}lianxikefu.png"></image>
+        </button>
+      </view>
+       <block wx:for="{{otherProgram}}" wx:for-index="id">
+          <template is="otherProgram" data="{{...item}}" />
+       </block>
+
+
+     </scroll-view>
+  </block>
+  <view class="buttom-select-view">
+    <view class="buttom-one-select-view" bindtap="selectFight">
+      <block wx:if="{{selfPage == 1}}">
+        <image class="icon-img" src="{{imgUrl}}icon.png"></image>
+        <text>我要挑战</text>
+      </block>
+      <block wx:else>
+        <image class="icon-img" src="{{imgUrl}}icon2.png"></image>
+        <text style='color:#ffd873'>我要挑战</text>
+      </block>
+    </view>
+    <view class="buttom-one-select-view" bindtap="selectSelfInfo">
+      <block wx:if='{{selfPage == 0}}'>
+        <image class="icon-img" src="{{imgUrl}}gren.png"></image>
+        <text>个人中心</text>
+      </block>
+      <block wx:else>
+        <image class="icon-img" src="{{imgUrl}}gren2.png"></image>
+        <text style='color:#ffd873'>个人中心</text>
+      </block>
+    </view>
+  </view>
+  <block wx:if='{{notEnoughFightNum}}'>
+    <view class="invite-view">
+       <button class="self-page-button" plain='true' hover-class='button-click' style='border:none;' open-type='share' >
+          <image class="jbjbnj-img" src="{{imgUrl}}jbjbnj.png"></image>
+        </button>
+        <button class="guanbi-button" plain='true' hover-class='button-click' style='border:none;' bindtap='closeInvite'>
+          <image class="guanbi-img" src="{{imgUrl}}guanbi.png"></image>
+        </button>
+    </view>
+  </block> 
+  <block wx:if="{{showDiag}}">
+    <view class="fight-doll-tips">
+      <view class="top-img-mask"></view>
+      <image class="tips-img" src="{{imgUrl}}shuomwenzi.png"></image>
+      <button class="lijilianxi-button" plain='true' hover-class='button-click' style='border:none;' open-type='contact'>
+        <image class="lijilianxi-img" src="{{imgUrl}}lijilianxi.png"></image>
+      </button>
+      <button class="lijilianxi-button-2" plain='true' hover-class='button-click' style='border:none;' bindtap='closeDiag'>
+        <image class="guanbi3-img" src="{{imgUrl}}guanbi3.png"></image>
+      </button>
+    </view>
+  </block>
+
+  <block wx:if="{{showInput}}">    
+    <view class="top-img-mask"></view>
+     <view class="input-view">
+      <image class="gerenxinxi-img" src="{{imgUrl}}gerenxinxi.png"></image>
+      <form class="form-view" bindsubmit="formSubmit">
+        <view class="row">
+            <text>姓 名：</text>
+            <input type="text" name="userName" placeholder="用户名" />
+        </view>
+        <view class="row">
+            <text>号   码：  </text>
+            <input type="text" name="userPhone" placeholder="电话号码" />
+        </view>
+        <view class="row">
+            <text>地  址：  </text>
+            <input type="text" name="userAdress" placeholder="地址" />
+        </view>
+         <view class="row">
+            <text>名 称：</text>
+            <input type="text" name="userDollName" placeholder="娃娃名称" />
+        </view>
+        <!--<view class="row">-->
+            <button class="submit-button" type="primary" plain='true' hover-class='button-click' style='border:none;' form-type="submit">
+              <image class="tijiaoxinxi-img" src="{{imgUrl}}tijiaoxinxi.png"></image>
+           </button>
+            <!--<button class='cancel-button' type="primary" bindtap="cancelInput">取消</button>-->
+        <!--</view>-->       
+      </form>
+      <button class='cancel-button' type="primary" plain='true' hover-class='button-click' style='border:none;' bindtap="cancelInput">
+        <image class="guanbi-img" src="{{imgUrl}}guanbi.png"></image>
+      </button>
+    </view>
+  </block>
+
+</view>

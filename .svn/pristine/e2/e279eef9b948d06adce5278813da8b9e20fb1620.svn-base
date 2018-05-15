@@ -1,0 +1,231 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: #313131;
+  position: absolute;
+  align-items: center;
+  text-align: center;
+}
+
+.bg-img {
+  position: absolute;
+  width: 100%;
+  height: 825rpx;
+  top: 0rpx;
+}
+
+.buttom-text-view {
+  position: absolute;
+  top: 1014rpx;
+}
+
+.buttom-text {
+  color: white;
+  font-size: 40rpx;
+}
+
+.ready-num {
+  position: absolute; 
+  top: 0rpx;
+  width: 100%;
+  font-size: 660rpx;
+  animation: myfirst 0.8s linear ;
+  opacity: 0;
+  color: white;
+  left: 30rpx;
+}
+
+.ready-num-1 {
+  position: absolute; 
+  top: 200rpx;
+  width: 100%;
+  font-size: 350rpx;
+  animation: myfirst 0.6s linear ;
+  opacity: 0;
+  color: white;
+  left: 25rpx;
+}
+
+@keyframes myfirst /* Safari 和 Chrome */
+{
+  0%   {opacity: 0;}
+  25%  {opacity: 1;}
+  50%  {transform: scale(0.5);}
+  100% {opacity: 0;transform: scale(0.5)}
+}
+
+.answer-top-view { 
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%; 
+  left: 0rpx;
+  top: -600rpx;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  animation: top-view-down 0.5s linear forwards;  
+}
+
+@keyframes top-view-down /* Safari 和 Chrome */
+{
+  0%   {transform: translateY(0);} 
+  100% {transform: translateY(600rpx);}
+}
+
+.answer-buttom-view { 
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%; 
+  top:600rpx; 
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  animation: top-buttom-up 0.5s linear forwards;
+}
+
+@keyframes top-buttom-up /* Safari 和 Chrome */
+{
+  0%   {transform: translateY(0);} 
+  100% {transform: translateY(-600rpx);}
+}
+
+
+.fight-tips-text {
+  font-size: 36rpx;
+  color: white;
+  position: absolute;
+  top: 31rpx;  
+  text-align: center; 
+  left: 170rpx;
+}
+
+.formula-1 {
+  font-size: 130rpx;
+  color: white;
+  top:360rpx;  
+}
+
+.formula-2 {
+  font-size: 130rpx;
+  color: white;  
+  margin-bottom: 160rpx;
+}
+
+.num-index-text {
+  position: absolute;
+  font-size: 48rpx;
+  color: white;
+  top:215rpx;
+  left: 311rpx;
+}
+
+.dui-button {
+  position: absolute;
+  background: #00a08e;
+  top: 840rpx;
+  left:30rpx;
+  height: 329rpx;
+  width: 329rpx;
+  display: flex;
+  align-items: center;
+}
+
+.dui-img {
+  position: relative;
+  left: 10rpx;
+  height: 181rpx;
+  width: 239rpx;
+}
+
+.cuo-img {
+  position: relative;
+  left: 40rpx;
+  height: 187rpx;
+  width: 183rpx;
+}
+
+
+.cuo-button {
+  position: absolute;
+  background: #ea5666;
+  top: 840rpx;
+  right:30rpx;
+  height: 329rpx;
+  width: 329rpx;
+  display: flex;
+  align-items: center;
+}
+
+.button-click {
+  transform: scale(0.9);
+}
+
+.wenzi-img {
+  height: 130rpx;
+  width: 548rpx;
+}
+
+.wenzi-img-button {
+ 
+}
+
+.progress-buttom-view-bg {
+  position: absolute;
+  top: 156rpx;
+  background-color: #3d6fad;
+  width: 634rpx;
+  height: 38rpx;
+  left: 55rpx;
+  border-radius: 20rpx;
+}
+
+.progress-buttom-view {
+  position: absolute;
+  top: 110rpx;
+  background-color: #344d81;
+  width: 626rpx;
+  height: 30rpx;
+  left: 59rpx;
+  border-radius: 20rpx;
+}
+
+.progress-top-view {
+  position: absolute;
+  top: 110rpx;
+  background-color: #62d2bd;
+  width: 300rpx;
+  height: 30rpx;
+  left: 59rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+
+.tanc2-img {
+  position: relative;
+  width: 559rpx;
+  height: 143rpx; 
+}
+
+
+
+.win-view {
+  position: absolute;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  align-content: center;
+
+}
+
+.win-button {
+  position: relative;
+ 
+}

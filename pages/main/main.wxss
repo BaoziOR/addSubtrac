@@ -1,0 +1,533 @@
+.main-container {
+  height: 100%;
+  width: 100%;
+  background-color: #fdb830;
+  position: absolute;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  height: 850rpx;
+}
+
+.bottom-view {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  top: 860rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-other-program-view {
+ 
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10rpx;
+}
+
+.new-program-button-img {
+  width: 117rpx;
+  height: 117rpx;
+  margin-bottom: 0rpx;
+}
+
+.new-one-other-program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-program-text {
+  margin-top: 0rpx;
+}
+
+.scroll-view {
+  position: absolute;
+  width: 100%;
+  height: 91%;
+  top: 0rpx;
+  left: 0rpx; 
+}
+
+.buttom-select-view {
+  position: absolute;
+  top: 91%; 
+  width: 100%;
+  height: 9%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon-img {
+  height: 50rpx;
+  width: 55rpx;
+}
+
+.tubiao-view {
+  position: absolute;
+  top: 0rpx;
+  width: 100%;
+
+}
+
+.tubiao-img {
+  position:absolute;
+  height: 150rpx;
+  width: 670rpx;  
+  left: 37rpx;
+  top: 0rpx;
+}
+
+.tubiao-text {
+  position: absolute;
+  top: 70rpx;
+  left: 220rpx;
+  color: white;
+  font-size: 40rpx;
+}
+
+.weizi-img {
+  position: absolute;
+  top: 223rpx;
+  width: 560rpx;
+  height: 210rpx;
+  left: 101rpx;
+}
+
+.buttom-one-select-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fight-button {
+  position: absolute;
+  top: 555rpx;
+  left: 37rpx;
+  height: 100rpx;
+  width: 660rpx;
+}
+
+.button-img {
+  position: absolute;
+  height: 100rpx;
+  width: 660rpx;
+  left: 0rpx;  
+}
+
+.button-click {
+  transform: scale(0.9);
+}
+
+.friend-button {
+  position: absolute;
+  top: 700rpx;
+  left: 37rpx;
+  height: 100rpx;
+  width: 660rpx;
+}
+
+.change-text-view { 
+  display: flex; 
+  margin-bottom: 30rpx;
+}
+
+.change-text {
+  border-style: solid;
+  border-width: 2rpx;
+  width: 223rpx;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  border-color: #eda10b;
+  color: #216b99;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.honor-view {  
+  background: #fff6da;
+  align-items: center;  
+  align-content: center;
+  width: 90%;
+}
+
+.honor-item-view {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 657rpx;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  height: 80rpx;
+}
+
+.template-honor-index { 
+  margin-left: 10rpx;
+  border-radius: 100%;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: red;
+  text-align: center; 
+}
+
+.template-honor-head { 
+  border-radius: 100%;
+  width: 80rpx;
+  height: 80rpx;
+ margin-left: 20rpx;
+}
+
+.template-honor-name {
+  text-align: left;   
+  width: 150rpx;
+}
+
+.template-honor-num {  
+  width: 200rpx;
+  text-align: left;
+  margin-left: 50rpx;
+
+}
+
+.row-view {
+  position: relative;
+  width: 80%;
+  height: 5rpx;
+  background: #ffecb1;
+  margin-bottom: 20rpx; 
+  left: 50rpx;
+}
+
+.self-scroll-view {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 100%;   
+  height: 91%;
+}
+
+.self-top-view {
+  position: absolute;
+  width: 100%;
+  height: 669rpx;
+  background-color: #216b99;
+  top: 0rpx;
+  left: 0rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.self-buttom-view {
+  position: absolute;
+  width: 100%;
+  top: 669rpx;
+  height: 500rpx;
+  background-color: #fff6da;
+}
+
+.self-info-head {
+  position: absolute;
+  border-radius: 100%;
+  width: 150rpx;
+  height: 150rpx;
+  top: 77rpx;
+  left: 289rpx;
+}
+
+.doll-tips-text {  
+  top: 275rpx;
+  color: white;
+  font-size: 40rpx; 
+  margin-bottom: 60rpx; 
+}
+
+.self-info-view {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+
+.three-self-info {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 200rpx;
+  justify-content: space-around;
+  top: 385rpx;
+}
+
+.two-button-view {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  top: 543rpx;
+  width: 100%;
+}
+
+.self-button-img {
+  width: 330rpx;
+  height: 70rpx;
+}
+
+.kefu-img {
+  width: 690rpx;
+  height: 86rpx;
+}
+
+.kefu-button {
+  position: absolute;
+  top: 40rpx;
+}
+
+.got-doll-view {  
+  width: 678rpx;
+  height: 114rpx;
+  background-color: #fff6da;
+  margin-bottom: 30rpx;
+}
+
+.all-doll-pic { 
+  width: 100%;
+}
+
+.doll-img {
+  width: 678rpx;
+  height: 287rpx;
+}
+
+.doll-template-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doll-text-template-view {
+  text-align: center;
+  background-color: white;
+  width: 678rpx;
+  height: 80rpx;
+  margin-bottom: 30rpx;
+}
+
+.got-doll-img {
+  width: 200rpx;
+  height: 57rpx;  
+}
+
+.win-text {
+  position: relative;
+  top: 30rpx;
+  left: 20rpx;
+}
+
+.got-doll-button {
+  position: relative;
+  width: 400rpx;
+  height: 157rpx;
+  left: 200rpx;
+  top: -15rpx;
+}
+
+.other-program-view {
+  display: flex;
+  position: absolute;
+  top: 845rpx;
+  justify-content: space-between;
+  width: 100%;
+  height: 250rpx;
+}
+
+.program-img {
+  width: 109rpx;
+  height: 109rpx;
+}
+
+.program-button-img {
+  width: 156rpx;
+  height: 72rpx;
+}
+
+.program-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  left: -20rpx;
+}
+
+.fight-text-num-text {
+  position: absolute;
+  top: 460rpx;
+  color: white;
+  left: 188rpx;
+  font-size: 40rpx;
+}
+
+.program-button {
+  width: 200rpx;
+  height: 72rpx;
+  margin: 0rpx;
+}
+
+.program-text1 {
+  font-size: 40rpx;
+
+}
+
+.jbjbnj-img {
+  width: 484rpx;
+  height: 585rpx;
+}
+
+.guanbi-img {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.invite-view {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.guanbi-button {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+
+ .fight-doll-tips {
+  position: absolute; 
+  height: 100%;
+  width: 100%;
+
+ }
+
+ .tips-img {
+  position: absolute;   
+  height: 879rpx;
+  width: 688rpx;
+  top: 80rpx;
+  left: 40rpx;
+ }
+
+ .lijilianxi-img {  
+    width: 278rpx;
+    height: 77rpx;
+ }
+
+ .lijilianxi-button {
+   position: absolute;
+    width: 100%;
+    height: 77rpx;
+    top: 830rpx;
+ }
+
+  .lijilianxi-button-2 {
+   position: absolute;
+    width: 100%;
+    height: 77rpx;
+    top: 980rpx;
+ }
+
+ .guanbi3-img {
+  width: 64rpx;
+  height: 64rpx;
+ }
+
+ .top-img-mask {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  left: 0rpx;
+  top: 0rpx;  
+  background-color: black; 
+}
+
+.form-view {
+  position: absolute;
+  top: 420rpx;
+  left: 10%;
+}
+
+ .input-view {
+  position: absolute;   
+  height: 100%;
+  width: 100%;  
+  left: 80rpx;
+ }
+
+ .gerenxinxi-img {
+  position: absolute;
+  top: 260rpx;
+  width: 580rpx;
+  height: 639rpx;
+ }
+
+ .tijiaoxinxi-img {
+  width: 377rpx;
+  height: 78rpx;
+ }  
+
+ .row{   
+    display: flex;
+    align-items: center;
+    margin-bottom: 32rpx;
+}
+
+.row text{
+    flex-grow: 1;
+    text-align: right;
+}
+.row input{
+    font-size: 20rpx;   
+    flex-grow: 3;   
+    display: inline-block;
+    border-radius: 20rpx;    
+     border: 2rpx solid gainsboro;
+}
+
+.row button{
+   
+}
+
+.submit-button {
+  position: absolute;
+  top: 344rpx;
+}
+
+.cancel-button {
+  position: absolute;
+  left: 500rpx;
+  top: 245rpx;
+}
+
+.lianlian-line-img {
+  width: 678rpx;
+  height: 152rpx;
+}
+
+.kaishi-button {
+  position: absolute;
+  top: 50rpx;
+  left: 460rpx;
+}
+
+.kaishi-img { 
+  width: 200rpx;
+  height: 57rpx; 
+}
+
+
+

@@ -1,0 +1,29 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  overflow: hidden;
+} 
+
+page{
+  font-family: "PingFang SC", "PingFang-SC-Light", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei",  "sans-serif";
+  font-size: 28rpx;
+  color: #676767;
+  height: 100%;  
+  width: 100%; 
+  overflow: hidden;
+}
+
+/*滑动条影藏  */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
